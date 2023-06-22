@@ -5,6 +5,7 @@ import HomeSpark from "../../components/home/HomeSpark/homespark"
 import HomeFaqs from "../../components/home/HomeFaqs/homefaqs"
 import HomeMusic from "../../components/home/HomeMusic/homemusic"
 import HomeHelpYou from "../../components/home/HomeHelpYou/homehelpyou"
+import HomeConnect from "../../components/home/HomeConnect/homeconnect"
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
         <HomeSpark />      
         <HomeFaqs />      
         <HomeMusic />    
-        <HomeHelpYou />  
+        <HomeHelpYou />
+        <HomeConnect />  
     </div>
   )
 }

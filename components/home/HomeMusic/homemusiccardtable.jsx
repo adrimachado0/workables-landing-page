@@ -82,7 +82,7 @@ const HomeMusicCardTable = () => {
       }
       {
         currentSong && 
-        <div className={`gradient-aside ${aside ? 'fixed' : 'hidden'} bottom-0 left-0 w-full pt-1`}>
+        <div className={`gradient-aside ${aside ? 'fixed' : 'hidden'} bottom-0 left-0 w-full pt-1 z-50`}>
           <div className='bg-white'>
             <div className='py-5 px-10 flex items-center gap-5'>
 

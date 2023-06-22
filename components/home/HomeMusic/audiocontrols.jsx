@@ -29,15 +29,13 @@ const AudioControls = ({pause, setPause, audioRef, currentSong, setCurrentSong, 
         setCurrentSong(cancionPrevia[0])
     }
 
-
-    const [isPlaying, setIsPlaying] = useState(false)
     const [volume, setVolume] = useState(1)
     const [progress, setProgress] = useState(0)
     const [duration, setDuration] = useState(0)
 
     useEffect(() => {
         
-        const audio = audioRef.current 
+        const audio = audioRef.current
 
         const handleTimeUpdate = () => setProgress(audio.currentTime )
         const handleDurationChange = () => setDuration(audio.duration)

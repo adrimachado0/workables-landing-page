@@ -12,7 +12,7 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <footer className='footer md:h-96 flex md:justify-between items-center flex-col py-20 mt-10'>
+    <footer className='footer md:h-96 flex md:justify-between items-center flex-col py-20 mt-52'>
         <div className='w-3/5 flex flex-col gap-5 items-center lg:items-stretch'>
             <Image className='w-12' src={Logo} alt="workables logo" />
             <div className='flex flex-col lg:flex-row lg:justify-between items-center gap-5 lg:gap-0'>

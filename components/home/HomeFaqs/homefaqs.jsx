@@ -27,7 +27,7 @@ const HomeFaqs = () => {
         <>
             <div className="my-52">
                 <div className="rounded-3xl gradiente p-0.5">
-                    <div className="rounded-3xl flex flex-col md:flex-row h-full w-full items-center justify-between bg-white p-3 gap-5">
+                    <div className="rounded-3xl flex flex-col md:flex-row h-full w-full justify-between bg-white p-6 gap-5">
                         <HomeFaqsLeft open={open} setOpen={setOpen} />
                         <HomeImages faqsImage={faqsImages[open]}/>
                     </div>

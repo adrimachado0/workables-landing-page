@@ -58,7 +58,7 @@
 
 .step-gradient {
     background: #FF7582;
-    background: linear-gradient(to right, #FF7582 0%, #5fafff 15%);
+    background: linear-gradient(to right, #FF7582 0%, #5fafff 7%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
