@@ -12,7 +12,7 @@ const HomeMain = () => {
             <p className='w-80'>Streamline production, reduce costs, and create high-quality content with Workables.</p>
             <GetStarted info="Get started" />
         </div>
-        <Image width={600} src={imageMain} alt="Imagen main workables" />
+        <Image width={600} src={imageMain} alt="Imagen main workables" priority={true} />
     </div>
   )
 }
