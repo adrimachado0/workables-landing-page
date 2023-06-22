@@ -13,7 +13,7 @@ const ConnectAudiences = () => {
                 <p className='w-4/5 mx-auto my-3'>We provide publishing services to help producers, writers, and artists become profitable. Our musical universe is waiting for you to launch your career to stardom.</p>
                 <ConnectNow info="Join now" />
             </div>
-            <div className='w-[155%] h-full bg-[url("../../components/home/HomeConnect/img/audiencia.png")] bg-cover  bg-no-repeat'></div>
+            <div className='w-full h-full bg-[url("../../components/home/HomeConnect/img/audiencia.png")] bg-center bg-cover bg-no-repeat'></div>
         </div>
     </div>
   )

@@ -16,8 +16,8 @@ const ConnectPlaystore = () => {
                 <ConnectNow info="Download now" />
             </div>
             <div className='flex flex-col gap-5'>
-                <Image width={300} src={AppStore}/>
-                <Image width={300} src={PlayStore}/>
+                <Image width={300} src={AppStore} alt='Button appstore'/>
+                <Image width={300} src={PlayStore} alt='Button playstore'/>
             </div>
         </div>
     </div>
