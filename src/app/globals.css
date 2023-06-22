@@ -2,26 +2,138 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/**    Nordique PRO    **/
+
+@font-face {
+    font-family: 'Nordique-Inline';
+    src: url('../../public/fonts/nordiqueInline.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Nordique-Light';
+    src: url('../../public/fonts/nordiqueLight.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Nordique-Regular';
+    src: url('../../public/fonts/nordiqueRegular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Nordique-Semibold';
+    src: url('../../public/fonts/nordiqueSemibold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Nordique-Bold';
+    src: url('../../public/fonts/nordiqueBold.otf') format('opentype');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.nordique-inline {
+    font-family: 'Nordique-Inline';
+}
+.nordique-light {
+    font-family: 'Nordique-Light';
+}
+.nordique-regular {
+    font-family: 'Nordique-Regular';
+}
+.nordique-semibold {
+    font-family: 'Nordique-Semibold';
+}
+.nordique-bold {
+    font-family: 'Nordique-Bold';
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/** ----------------------------------------------------------------------- **/
+
+.gradiente {
+    background: rgb(255,117,130) !important;
+    background: linear-gradient(135deg, #ff7582 35% ,#5fafff 75%) !important;
+}
+
+.gradiente-opacity {
+    background: rgb(255,117,130) !important;
+    background: linear-gradient(100deg, #ff7582 35% ,#5fafff 75%) !important;
+    opacity: 25%;
+    box-shadow: 0px 0px 40px 0px #ff7582;
+}
+
+
+.step-gradient {
+    background: #FF7582;
+    background: linear-gradient(to right, #FF7582 0%, #5fafff 15%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.music-title-gradient {
+    background: linear-gradient(100deg, #ff7582 ,#5fafff 50%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+}
+
+.help-gradient {
+    background: #FF7582;
+    background: linear-gradient(to right, #FF7582 25%, #5fafff 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-aside {
+    background: rgb(255,117,130) !important;
+    background: linear-gradient(135deg, #5fafff 25% ,#ff7582 65%) !important;
+}
+
+.footer {
+    background-color: #FFDDE0;
+}
+
+
+.home-spark-title {
+    background: #FF7582;
+    background: linear-gradient(to right, #FF7582 0%, #5fafff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 4px 4px 2px linear-gradient(to right, #FF7582 0%, #5fafff 100%);
+}
+
+.box:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #FF7582 0%, #5fafff 100%);
+    transform: translate(0, 55%);
+    filter: blur(25px);
+    opacity: 0.7;
+    border-radius: inherit;
+    width: 440px;
+    height: 50%;
+}
+.box::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+
+.prueba-shadow {
+    position: relative;
+}
+
+.prueba-shadow:before {
+    position: absolute;
+    border-radius: 35px;
+    height: 100%;
+    width: 100%;
+    content:"";
+    z-index: -1;
+    background: linear-gradient(to right, #ff7582 35% ,#5fafff 75%);
+    filter: blur(10px);
 }
