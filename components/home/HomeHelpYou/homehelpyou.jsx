@@ -37,15 +37,15 @@ const HomeHelpYou = () => {
                             </div>
                             <div className='flex flex-col items-center justify-between'>
                                 <Image width={43} src={Copywriters} alt="Logo icon"/>
-                                <p>vocalists</p>
+                                <p>copywriters</p>
                             </div>
                             <div className='flex flex-col items-center justify-between'>
                                 <Image width={43} src={Announcers} alt="Logo icon"/>
-                                <p>vocalists</p>
+                                <p>announcers</p>
                             </div>
                             <div className='flex flex-col items-center justify-between'>
                                 <Image width={43} src={Songwriters} alt="Logo icon"/>
-                                <p>vocalists</p>
+                                <p>songwriters</p>
                             </div>
                         </div>
                         <GetStarted info="Join us" />

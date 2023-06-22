@@ -7,22 +7,27 @@
 @font-face {
     font-family: 'Nordique-Inline';
     src: url('../../public/fonts/nordiqueInline.otf') format('opentype');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Nordique-Light';
     src: url('../../public/fonts/nordiqueLight.otf') format('opentype');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Nordique-Regular';
     src: url('../../public/fonts/nordiqueRegular.otf') format('opentype');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Nordique-Semibold';
     src: url('../../public/fonts/nordiqueSemibold.otf') format('opentype');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Nordique-Bold';
     src: url('../../public/fonts/nordiqueBold.otf') format('opentype');
+    font-display: swap;
 }
 
 .nordique-inline {
