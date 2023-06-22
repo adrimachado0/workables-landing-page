@@ -1,8 +1,8 @@
 import React from 'react'
 
 import ConnectNow from '../../button/connectNow'
-import AppStore from './img/appstore.png'
-import PlayStore from './img/playstore.png'
+import AppStore from './img/appstore.webp'
+import PlayStore from './img/playstore.webp'
 
 import Image from 'next/image'
 

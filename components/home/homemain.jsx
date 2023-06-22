@@ -1,5 +1,5 @@
 import React from 'react';
-import imageMain from './img/imagemain.png';
+import imageMain from './img/imagemain.webp';
 import GetStarted from '../button/getstarted';
 
 import Image from 'next/image';
