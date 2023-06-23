@@ -42,7 +42,6 @@ const HomeMusicCardTable = ({aside, setAside, audioRef, currentSong, setCurrentS
                   <p className='text-gray-400'>{currentSong.genre}</p>
                 </div>
               </div>
-
               <audio
                   ref={audioRef}
                   src={currentSong.music}
