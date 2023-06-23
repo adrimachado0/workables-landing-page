@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 const ConnectPlaystore = () => {
   return (
-    <div className='gradiente rounded-5xl p-[1px]'>
+    <div className='gradiente rounded-5xl p-0.5'>
         <div className='flex flex-col items-center h-[500px] overflow-hidden rounded-5xl bg-white'>
             <div className='text-center my-10'>
                 <p className='nordique-semibold text-xl lowercase'>Discover the world of soundscapes with our app</p>

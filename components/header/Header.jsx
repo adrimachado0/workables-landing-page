@@ -7,12 +7,14 @@ import Image from 'next/image'
 
 const Header = () => {
   return (
-    <header className='flex gap-2 mx-2 md:gap-5 justify-between items-center md:mx-20 my-5'>
-        <Link href='/'><Image className=' w-52' src={Logo} alt="Logo Workables" /></Link>
+    <header className='absolute w-full flex gap-2 md:gap-5 justify-between items-center my-5'>
+      <div className='flex justify-between w-full mx-20'>
+        <Link href='https://bubble.io/domain_not_supported?domain=app.workables.io'><Image className=' w-52' src={Logo} alt="Logo Workables" /></Link>
         <div className='flex gap-2 md:gap-5 items-center'>
             <p className='cursor-pointer'>Sign in</p>
             <GetStarted info="Get started"/>
         </div>
+      </div>
     </header>
   )
 }
