@@ -103,7 +103,7 @@ const HomeMusicCard = () => {
                         :   <Image className=' opacity-0' width={27} height={25} src={CardPrevious} alt='Controller icon' />
                   }
                   {
-                      currentSong && pause
+                      currentSong && !pause
                       ? <Image className='cursor-pointer' onClick={handleClickPlay} src={CardPause} width={25} alt="Icon controller"/>
                       : <Image className='cursor-pointer' onClick={handleClickPlay} src={CardPlay} width={25} alt="Icon controller"/>
                   }

@@ -32,12 +32,11 @@ const HomeMusicCardTable = ({aside, setAside, audioRef, currentSong, setCurrentS
       }
       {
         currentSong && 
-        <div className={`gradient-aside ${aside ? 'fixed' : 'hidden'} bottom-0 left-0 w-full pt-1 z-50`}>
+        <div className={`gradient-aside ${aside ? 'fixed' : 'hidden'} bottom-0 left-0 w-full pt-0.5 z-50`}>
           <div className='bg-white'>
-            <div className='py-5 px-10 flex items-center gap-5'>
-
-              <div className='flex gap-5 items-center'>
-                <Image className='w-14 rounded-lg' src={currentSong.icon} alt="Icon music" />
+            <div className='py-3 px-10 flex items-center gap-5'>
+              <div className='flex gap-3 items-center'>
+                <Image height={48} className='rounded-lg' src={currentSong.icon} alt="Icon music" />
                 <div className='w-36'>
                   <p>{currentSong.song}</p>
                   <p className='text-gray-400'>{currentSong.genre}</p>

@@ -10,7 +10,7 @@ import HomePlace from './img/HomePlace.png';
 
 const HomeMainSecondary = () => {
   return (
-    <div className='flex gap-20 my-52'>
+    <div className='flex flex-wrap justify-around gap-20 my-52'>
         <HomeSecondaryComponent logo={{
             logo:HomeStreamLine,
             width:'128',
