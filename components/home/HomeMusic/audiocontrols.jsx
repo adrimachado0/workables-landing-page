@@ -7,6 +7,8 @@ import Next from './controlicon/next.png'
 import Play from './controlicon/play.png'
 import Pause from './controlicon/pause.png'
 
+import CloseAside from './img/CloseAside.png'
+
 const AudioControls = ({pause, setPause, audioRef, currentSong, setCurrentSong, canciones}) => {
 
     const handleClickPlay = () => {
@@ -105,7 +107,7 @@ const AudioControls = ({pause, setPause, audioRef, currentSong, setCurrentSong, 
                         return formatearDuracion(progress);
                     })()}
                 </span>
-                <div className='relative w-[709px] h-1 bg-gray-400 rounded-full mr-2'>
+                <div className='relative w-[500px] h-1 bg-gray-400 rounded-full mr-2'>
                     <input 
                         type="range" 
                         className="absolute z-10 top-0 left-0 w-full h-full opacity-0 cursor-pointer" 
@@ -134,19 +136,22 @@ const AudioControls = ({pause, setPause, audioRef, currentSong, setCurrentSong, 
                     })()}
                 </span>
             </div>
-            <div className='flex items-center'>
+            <div className='relative h-1 bg-gray-400 rounded-full mr-2 flex items-center'>
                 <input 
                     type="range" 
-                    className='w-[136px] h-1 rounded-full mr-2' 
+                    className='w-[136px] h-1 rounded-full mr-2 opacity-0 z-10' 
                     min={0}
                     max={1}
                     step={0.1}
                     value={volume}
                     onChange={handleVolumeChange}
-
                 />
+                <div
+                    className='absolute top-0 left-0 h-full bg-black rounded-full'
+                    style={{width:`${volume/1 * 100}%`}}
+                ></div>
             </div>
-            <button onClick={() => setCurrentSong(null)}>X</button>
+            <Image className='cursor-pointer' onClick={() => setCurrentSong(null)} src={CloseAside} width={20} />
         </div>
     )
 }

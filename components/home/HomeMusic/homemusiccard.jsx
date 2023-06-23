@@ -99,17 +99,17 @@ const HomeMusicCard = () => {
                 <div className='flex items-center justify-center gap-28 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   {
                         currentSong && currentSong.id > 1
-                        ?   <Image onClick={handleClickPrevious} width={27} height={25} src={CardPrevious} alt='Controller icon' />
+                        ?   <Image className='cursor-pointer' onClick={handleClickPrevious} width={27} height={25} src={CardPrevious} alt='Controller icon' />
                         :   <Image className=' opacity-0' width={27} height={25} src={CardPrevious} alt='Controller icon' />
                   }
                   {
-                      currentSong && !pause
-                      ? <Image onClick={handleClickPlay} src={CardPause} width={25} alt="Icon controller"/>
-                      : <Image onClick={handleClickPlay} src={CardPlay} width={25} alt="Icon controller"/>
+                      currentSong && pause
+                      ? <Image className='cursor-pointer' onClick={handleClickPlay} src={CardPause} width={25} alt="Icon controller"/>
+                      : <Image className='cursor-pointer' onClick={handleClickPlay} src={CardPlay} width={25} alt="Icon controller"/>
                   }
                   {
                         currentSong && currentSong.id < canciones.length
-                        ?   <Image onClick={handleClickNext} width={27} height={25} src={CardNext} alt='Controller icon' />
+                        ?   <Image className='cursor-pointer' onClick={handleClickNext} width={27} height={25} src={CardNext} alt='Controller icon' />
                         :   <Image className=' opacity-0' width={27} height={25} src={CardNext} alt='Controller icon' />
                   }
                 </div>
