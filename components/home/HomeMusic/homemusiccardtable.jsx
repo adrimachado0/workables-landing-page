@@ -3,59 +3,9 @@ import React, { useState, useRef, useEffect } from 'react'
 import HomeMusicCardTableSection from './homemusiccardtablesection'
 import AudioControls from './audiocontrols'; 
 
-import GottaFeelingIcon from './songIcon/iGottaFeelingIcon.jpg'
-import OneKissIcon from './songIcon/OneKissIcon.jpg'
-import BonesIcon from './songIcon/bonesIcon.jpg'
-import SummerIcon from './songIcon/summerIcon.jpg'
-
-
 import Image from 'next/image';
 
-const HomeMusicCardTable = () => {
-
-  const [aside, setAside] = useState(false)
-  const audioRef = useRef()
-  const [currentSong, setCurrentSong] = useState(null);
-  const [canciones, setCanciones] = useState([
-    {
-      music:'/feeling.mp3',
-      song:'I Gotta Feeling',
-      genre:'Pop',
-      duration:'4:49',
-      icon:GottaFeelingIcon,
-      id:1
-    },
-    {
-      music:'/oneKiss.mp3',
-      song:'One Kiss',
-      genre:'Dance Pop',
-      duration:'3:43',
-      icon:OneKissIcon,
-      id:2
-    },
-    {
-      music:'/bones.mp3',
-      song:'Bones',
-      genre:'Rock',
-      duration:'2:45',
-      icon:BonesIcon,
-      id:3
-    },
-    {
-      music:'/summer.mp3',
-      song:'Summer',
-      genre:'House',
-      duration:'3:54',
-      icon:SummerIcon,
-      id:4
-    },
-  ])
-
-  const [pause, setPause] = useState(false)
-
-  useEffect(() => {
-    setPause(false)
-  }, [currentSong])
+const HomeMusicCardTable = ({aside, setAside, audioRef, currentSong, setCurrentSong, canciones, setCanciones, pause, setPause}) => {
 
   return (
     <div>
@@ -101,6 +51,7 @@ const HomeMusicCardTable = () => {
               /> 
 
               <AudioControls pause={pause} setPause={setPause} audioRef={audioRef} currentSong={currentSong} setCurrentSong={setCurrentSong} canciones={canciones} setAside={setAside} />
+           
             </div>
           </div>
         </div>
