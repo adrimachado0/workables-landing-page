@@ -17,7 +17,7 @@ const questrial = Questrial({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${questrial.className} bg-[url("../../public/Backgrounds.svg")] bg-cover bg-left-top `}>
+      <body className={`${questrial.className}`}>
         <Header />
         {children}
         <Footer />
