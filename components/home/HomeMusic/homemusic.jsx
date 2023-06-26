@@ -6,11 +6,13 @@ import HomeMusicCard from './homemusiccard'
 const HomeMusic = () => {
 
   return (
-    <div className='grid grid-cols-[500px_480px] items-center justify-around'>
-        <div>
-            <h3 className='nordique-bold lowercase px-0.5 music-title-gradient text-6xl'>These are some songs we made</h3>
-            <p>Here is some of the work weve done with huge brands and artists.</p>
-            <GetStarted info='sing up' />  
+    <div className='grid grid-cols-[350px] sm:grid-cols-[400px] md:grid-cols-[500px] lg:grid-cols-[500px_480px] items-center justify-around gap-10 lg:gap-0'>
+        <div className='flex flex-col items-center lg:items-start gap-2'>
+            <h3 className='text-center lg:text-start nordique-bold lowercase px-0.5 music-title-gradient text-6xl'>These are some songs we made</h3>
+            <p className='text-center'>Here is some of the work weve done with huge brands and artists.</p>
+            <div>
+              <GetStarted info='sing up' />  
+            </div>
         </div>
         <HomeMusicCard />
     </div>

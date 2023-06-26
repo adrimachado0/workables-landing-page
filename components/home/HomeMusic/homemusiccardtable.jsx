@@ -5,6 +5,8 @@ import AudioControls from './audiocontrols';
 
 import Image from 'next/image';
 
+import CloseAside from './img/CloseAside.png'
+
 const HomeMusicCardTable = ({aside, setAside, audioRef, currentSong, setCurrentSong, canciones, setCanciones, pause, setPause}) => {
 
   return (
@@ -34,10 +36,10 @@ const HomeMusicCardTable = ({aside, setAside, audioRef, currentSong, setCurrentS
         currentSong && 
         <div className={`gradient-aside ${aside ? 'fixed' : 'hidden'} bottom-0 left-0 w-full pt-0.5 z-50`}>
           <div className='bg-white'>
-            <div className='py-3 px-10 flex items-center gap-5'>
-              <div className='flex gap-3 items-center'>
+            <div className='py-3 px-1.5 lg:px-5 flex justify-between items-center gap-0 lg:gap-5'>
+              <div className='md:w-[145px] flex gap-1.5 items-center md:mr-10'>
                 <Image height={48} className='rounded-lg' src={currentSong.icon} alt="Icon music" />
-                <div className='w-36'>
+                <div className='w-full hidden md:block'>
                   <p>{currentSong.song}</p>
                   <p className='text-gray-400'>{currentSong.genre}</p>
                 </div>
@@ -46,10 +48,11 @@ const HomeMusicCardTable = ({aside, setAside, audioRef, currentSong, setCurrentS
                   ref={audioRef}
                   src={currentSong.music}
                   autoPlay
+                  className='hidden'
               /> 
 
               <AudioControls pause={pause} setPause={setPause} audioRef={audioRef} currentSong={currentSong} setCurrentSong={setCurrentSong} canciones={canciones} setAside={setAside} />
-           
+              <Image alt="Icon close aside" className='cursor-pointer' onClick={() => setCurrentSong(null)} src={CloseAside} width={10} />
             </div>
           </div>
         </div>
