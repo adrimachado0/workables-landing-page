@@ -23,7 +23,7 @@ const HomeHelpYou = () => {
         </div>
         <div className='gradiente p-0.5 rounded-5xl'>
             <div className='prueba-shadow rounded-5xl'>
-                <div className='bg-white z-20 w-full flex py-5 lg:py-0 justify-center lg:justify-between rounded-5xl overflow-hidden'>
+                <div className='bg-white z-20 w-full flex py-5 px-0.5 lg:py-0 justify-center lg:justify-between rounded-5xl overflow-hidden'>
                     <Image className='-ml-4 hidden lg:block' height={250} src={Women} alt="Women image" />
                     <div className='flex flex-col justify-center items-center gap-5 '>
                         <div className='text-center'>
