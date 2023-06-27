@@ -24,7 +24,7 @@ const Header = () => {
         </div>
         <Image width={30} height={30} onClick={() => setOpenMenu(!openMenu)} className=' z-10 md:hidden cursor-pointer' src={Hamburger} alt="Hamburger menu"/>
       </div>
-        <div className={`z-50 absolute right-0 -top-5 ${openMenu ? 'w-full' : 'w-0'} transition-all duration-300 bg-white`}>
+        <div className={`z-50 absolute right-0 -top-5 ${openMenu ? 'w-full' : 'w-0'} transition-all duration-300 bg-white overflow-hidden`}>
               <div className={`md:hidden h-screen z-50 flex flex-col items-center justify-center`}>
                   <ul className={`flex flex-col gap-5 items-center`}>
                     <li className={`${openMenu ? 'w-fit' : 'w-0'}`}><p className='cursor-pointer'>Sign In</p></li>
