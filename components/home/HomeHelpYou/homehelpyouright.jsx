@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 const HomeHelpYouRight = () => {
   return (
-    <div className='flex justify-end'>
-        <Image width={450} src={ HomeHelpImage } alt="Help you image" />
+    <div className='hidden lg:block flex justify-end'>
+        <Image className='hidden lg:block' width={450} src={ HomeHelpImage } alt="Help you image" />
     </div>
   )
 }
