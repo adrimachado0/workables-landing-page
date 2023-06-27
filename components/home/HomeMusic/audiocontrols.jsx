@@ -77,7 +77,7 @@ const AudioControls = ({pause, setPause, audioRef, currentSong, setCurrentSong, 
     }
 
     return (
-        <div className='md:w-full flex items-center justify-start md:justify-evenly lg:justify-between gap-5'>
+        <div className='ml-[10px] md:w-full flex items-center justify-start md:justify-evenly lg:justify-between gap-5'>
             <div className='flex flex-col items-center lg:flex-row lg:gap-10'>
                 <div className='flex gap-4 items-center'>
                     {
@@ -106,17 +106,17 @@ const AudioControls = ({pause, setPause, audioRef, currentSong, setCurrentSong, 
                             </button>
                     }
                 </div>
-                <div className='flex items-center'>
-                    <span className='mr-2'>
+                <div className='mt-3 flex items-end'>
+                    <span className='mr-2 leading-[4.7px]'>
                         {(() => {
                             const formatearDuracion = (progress) => {
-                            const minutos = Math.floor(progress / 60);
-                            const segundos = Math.floor(progress % 60);
-                            const minutosFormateados = String(minutos).padStart(2, '0');
-                            const segundosFormateados = String(segundos).padStart(2, '0');
-                            return `${minutosFormateados}:${segundosFormateados}`;
+                                const minutos = Math.floor(progress / 60);
+                                const segundos = Math.floor(progress % 60);
+                                const minutosFormateados = String(minutos).padStart(2, '0');
+                                const segundosFormateados = String(segundos).padStart(2, '0');
+                                return `${minutosFormateados}:${segundosFormateados}`;
                             };
-
+                            
                             return formatearDuracion(progress);
                         })()}
                     </span>
@@ -135,7 +135,7 @@ const AudioControls = ({pause, setPause, audioRef, currentSong, setCurrentSong, 
                             style={{width: `${progress/duration * 100}%`}}
                         ></div>
                     </div>
-                    <span className='mr-2'>
+                    <span className='mr-2 leading-[4.7px]'>
                         {(() => {
                             const formatearDuracion = (duration) => {
                             const minutos = Math.floor(duration / 60);

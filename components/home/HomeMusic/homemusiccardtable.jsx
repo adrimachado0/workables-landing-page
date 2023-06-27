@@ -38,7 +38,7 @@ const HomeMusicCardTable = ({aside, setAside, audioRef, currentSong, setCurrentS
           <div className='bg-white'>
             <div className='py-3 px-1.5 lg:px-5 flex justify-between items-center gap-0 lg:gap-5'>
               <div className='md:w-[145px] flex gap-1.5 items-center md:mr-10'>
-                <Image height={48} className='rounded-lg' src={currentSong.icon} alt="Icon music" />
+                <Image height={48} className='rounded-lg hidden sm:block' src={currentSong.icon} alt="Icon music" />
                 <div className='w-full hidden md:block'>
                   <p>{currentSong.song}</p>
                   <p className='text-gray-400'>{currentSong.genre}</p>
