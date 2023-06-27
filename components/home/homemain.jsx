@@ -14,7 +14,8 @@ const HomeMain = () => {
               <GetStarted info="Get started" />
             </div>
         </div>
-        <Image className='w-[400px] lg:w-[600px]' src={imageMain} alt="Imagen main workables" priority={true} />
+        <Image width={400} className='lg:hidden' src={imageMain} alt="Imagen main workables" priority={true} />
+        <Image width={600} className='hidden lg:block' src={imageMain} alt="Imagen main workables" priority={true} />
     </div>
   )
 }
