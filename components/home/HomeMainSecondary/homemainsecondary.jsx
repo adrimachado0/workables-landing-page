@@ -23,8 +23,8 @@ const HomeMainSecondary = () => {
         }} title='No more calls & messaes' text="We match the best music studios in the world with the right talent for your project. Within seconds, they upload their sample and it's done."/>
         <HomeSecondaryComponent logo={{
             logo:HomePlace,
-            width:'160',
-            height:'60'
+            width:'208',
+            height:'96'
         }} title='All in one place' text='Stop losing time. At Workables you can manage your accounts, music production needs and finances in one single plattorm.'/>
     </div>
   )

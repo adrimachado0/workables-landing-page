@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const HomeHelpYouRight = () => {
   return (
-    <div className='justify-end hidden lg:flex'>
+    <div className='flex justify-end'>
         <Image width={450} src={ HomeHelpImage } alt="Help you image" />
     </div>
   )
