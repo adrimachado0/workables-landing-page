@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from '../../assets/workablesLogo.png'
 import GetStarted from '../button/getstarted'
 
@@ -9,6 +9,7 @@ import CloseAside from './img/CloseAside.png';
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { fixedUnfixed } from '@/redux/features/fixedBody/fixedBody';
@@ -16,6 +17,12 @@ import { fixedUnfixed } from '@/redux/features/fixedBody/fixedBody';
 const Header = ({fixed, setFixed}) => {
 
   const [openMenu, setOpenMenu] = useState(false)
+
+  const pathname = usePathname()
+
+  useEffect(() => {
+    setOpenMenu(!openMenu)
+  }, [pathname])
 
   // const fixed = useSelector(state => state.fixed)
   // const dispatch = useDispatch()
@@ -38,7 +45,10 @@ const Header = ({fixed, setFixed}) => {
         <div className={`z-50 absolute right-0 -top-5 ${openMenu ? 'w-full' : 'w-0'} transition-all duration-300 bg-white overflow-hidden`}>
               <div className={`md:hidden h-screen z-50 flex flex-col items-center justify-center`}>
                   <ul className={`flex flex-col gap-5 items-center`}>
-                    <li className={`${openMenu ? 'w-fit' : 'w-0'}`}><p className='cursor-pointer'>Sign in</p></li>
+                    <li>
+                      <Link className='z-10' href='/'><Image className='w-52' src={Logo} alt="Logo Workables" /></Link>
+                    </li>
+                    <li className={`${openMenu ? 'w-fit' : 'w-0'}`}><Link href="/waitlist" className='cursor-pointer'>Sign in</Link></li>
                     <li className={`${openMenu ? 'w-fit' : 'w-0'}`}><GetStarted info="Get started"/></li>
                     <li className={`${openMenu ? 'w-fit' : 'w-0'}`}><Image onClick={() => {setOpenMenu(!openMenu); handleFixedBody(false)}}className='cursor-pointer' width={10} src={CloseAside} alt="Close button" /></li>
                   </ul>
