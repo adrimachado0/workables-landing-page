@@ -5,6 +5,7 @@ import HomeMusicCardTable from './homemusiccardtable'
 
 import { useState, useRef, useEffect } from 'react'
 
+import BgLine from './img/BgLine.png'
 import CardImage from './img/CardImage.png'
 
 import GottaFeelingIcon from './songIcon/iGottaFeelingIcon.jpg'
@@ -93,7 +94,9 @@ const HomeMusicCard = () => {
     <div className=''>
       <div className='gradiente rounded-5xl p-0.5'>
         <div className='overflow-hidden pt-5 pb-3 bg-white flex flex-col gap-3 rounded-5xl'>
-            <div className='flex flex-col items-center bg-[url("../../components/home/HomeMusic/img/BgLine.png")] bg-contain bg-center bg-no-repeat'>
+            <div className='flex flex-col items-center'>
+              <Image width={476} className='absolute mt-10 hidden md:block' src={BgLine} />
+              <Image width={351} className='absolute mt-10 md:hidden' src={BgLine} />
               <div className='gradiente w-fit rounded-full p-1 relative'>
                 <Image height={224} className='rounded-full' src={currentSong ? currentSong.icon : CardImage} alt='Image card' />
                 <div className='flex items-center justify-center gap-28 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
