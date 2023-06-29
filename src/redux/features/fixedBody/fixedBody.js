@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
-
 export const fixedBody = createSlice({
     name: 'fixed',
     initialState: {
@@ -13,8 +11,6 @@ export const fixedBody = createSlice({
         },
     }
 })
-
-
 
 export const {
     fixedUnfixed

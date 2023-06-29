@@ -95,8 +95,8 @@ const HomeMusicCard = () => {
       <div className='gradiente rounded-5xl p-0.5'>
         <div className='overflow-hidden pt-5 pb-3 bg-white flex flex-col gap-3 rounded-5xl'>
             <div className='flex flex-col items-center'>
-              <Image width={476} className='absolute mt-10 hidden md:block' src={BgLine} />
-              <Image width={351} className='absolute mt-10 md:hidden' src={BgLine} />
+              <Image width={476} className='absolute mt-10 hidden md:block' src={BgLine} alt='Bg line'/>
+              <Image width={351} className='absolute mt-10 md:hidden' src={BgLine} alt='Bg line'/>
               <div className='gradiente w-fit rounded-full p-1 relative'>
                 <Image height={224} className='rounded-full' src={currentSong ? currentSong.icon : CardImage} alt='Image card' />
                 <div className='flex items-center justify-center gap-28 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>

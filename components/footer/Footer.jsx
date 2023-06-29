@@ -19,22 +19,22 @@ const Footer = () => {
                 <p className='font-bold'>Creating lifelong memories</p>
                 <div className='flex gap-3 flex-wrap justify-center'>
                     <div className='w-12 h-12 border-solid border-black border rounded-full flex justify-center items-center'>
-                    <Image className='w-6 h-5' src={twitterLogo} alt="" />
+                    <Image className='w-6 h-5' src={twitterLogo} alt="Twitter logo" />
                     </div>
                     <div className='w-12 h-12 border-solid border-black border rounded-full flex justify-center items-center'>
-                    <Image className='w-6 h-6' src={instagramLogo} alt="" />
+                    <Image className='w-6 h-6' src={instagramLogo} alt="Instagram logo" />
                     </div>
                     <div className='w-12 h-12 border-solid border-black border rounded-full flex justify-center items-center'>
-                    <Image className='w-6 h-6' src={tiktokLogo} alt="" />
+                    <Image className='w-6 h-6' src={tiktokLogo} alt="Tiktok logo" />
                     </div>
                     <div className='w-12 h-12 border-solid border-black border rounded-full flex justify-center items-center'>
-                    <Image className='w-6 h-5' src={linkedinLogo} alt="" />
+                    <Image className='w-6 h-5' src={linkedinLogo} alt="LinkedIn logo" />
                     </div>
                     <div className='w-12 h-12 border-solid border-black border rounded-full flex justify-center items-center'>
-                    <Image className='w-6 h-4' src={youtubeLogo} alt="" />
+                    <Image className='w-6 h-4' src={youtubeLogo} alt="YouTube logo" />
                     </div>
                     <div className='w-12 h-12 border-solid border-black border rounded-full flex justify-center items-center'>
-                    <Image className='w-6 h-4' src={mailLogo} alt="" />
+                    <Image className='w-6 h-4' src={mailLogo} alt="Gmail logo" />
                     </div>
                 </div>
             </div>
