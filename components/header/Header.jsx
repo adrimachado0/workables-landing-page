@@ -13,24 +13,25 @@ import Image from 'next/image'
 import { useDispatch, useSelector } from 'react-redux';
 import { fixedUnfixed } from '@/redux/features/fixedBody/fixedBody';
 
-const Header = () => {
+const Header = ({fixed, setFixed}) => {
 
   const [openMenu, setOpenMenu] = useState(false)
 
-  const fixed = useSelector(state => state.fixed)
-  const dispatch = useDispatch()
+  // const fixed = useSelector(state => state.fixed)
+  // const dispatch = useDispatch()
 
   const handleFixedBody = fixedBody => {
-    dispatch(fixedUnfixed(fixedBody))
+    // dispatch(fixedUnfixed(fixedBody))
+    setFixed(fixedBody)
   }
 
   return (
-    <header className='absolute w-full flex gap-2 md:gap-5 justify-between items-center my-5'>
+    <header className='absolute w-full flex gap-2 md:gap-5 justify-between items-center my-5 top-0'>
       <div className='flex justify-around w-full md:mx-20 items-center'>
-        <Link className='z-10' href='https://bubble.io/domain_not_supported?domain=app.workables.io'><Image className='w-52' src={Logo} alt="Logo Workables" /></Link>
+        <Link className='z-10' href='/'><Image className='w-52' src={Logo} alt="Logo Workables" /></Link>
         <div className='gap-2 md:gap-5 items-center hidden md:flex'>
-            <p className='cursor-pointer'>Sign in</p>
-            <GetStarted info="Get started"/>
+            <Link href="/waitlist" className='cursor-pointer z-50'>Sign in</Link>
+            <GetStarted info="Get started" className='z-50 cursor-pointer' />
         </div>
         <Image width={30} height={30} onClick={() => {setOpenMenu(!openMenu); handleFixedBody(true)}} className=' z-10 md:hidden cursor-pointer' src={Hamburger} alt="Hamburger menu"/>
       </div>
