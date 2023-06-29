@@ -39,15 +39,11 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <div className='mt-5 md:mt-0 flex flex-col md:flex-row gap-3 md:gap-5 lg:gap-10'>
-            <div className='flex justify-center gap-3 md:justify-normal md:gap-5 lg:gap-10'>
-                <p className='font-bold text-workables-blue-0'>Workables</p>
-                <p className='font-bold'>Privacy policy</p>
-            </div>
-            <div className='flex gap-3 justify-center md:justify-normal md:gap-5 lg:gap-10'>
-                <p className='font-bold'>Terms of service</p>
-                <p className='font-bold'>Join research studies</p>
-            </div>
+        <div className='mt-5 md:mt-0 flex flex-row gap-4 lg:justify-between justify-center w-3/5 flex-wrap'>
+            <p className='font-bold text-workables-blue-0'>Workables</p>
+            <p className='font-bold'>Privacy policy</p>
+            <p className='font-bold'>Terms of service</p>
+            <p className='font-bold'>Join research studies</p>
             <p className='text-center md:text-justify font-bold'>Feedback</p>
         </div>
     </footer>

@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <header className='absolute w-full flex gap-2 md:gap-5 justify-between items-center my-5'>
-      <div className='flex justify-between w-full md:mx-20 items-center'>
+      <div className='flex justify-around w-full md:mx-20 items-center'>
         <Link className='z-10' href='https://bubble.io/domain_not_supported?domain=app.workables.io'><Image className='w-52' src={Logo} alt="Logo Workables" /></Link>
         <div className='gap-2 md:gap-5 items-center hidden md:flex'>
             <p className='cursor-pointer'>Sign in</p>
