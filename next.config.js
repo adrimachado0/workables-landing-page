@@ -7,6 +7,7 @@ const nextConfig = {
             loader: 'file-loader',
           },
         });
+        
         return config;
     },
 }

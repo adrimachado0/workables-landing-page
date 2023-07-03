@@ -17,7 +17,7 @@ const Footer = () => {
             <Image className='w-12' src={Logo} alt="workables logo" />
             <div className='flex flex-col lg:flex-row lg:justify-between items-center gap-5 lg:gap-0'>
                 <p className='font-bold'>Creating lifelong memories</p>
-                <div className='flex gap-3 flex-wrap justify-center'>
+                <div className='flex gap-3 flex-wrap w-56 sm:w-fit justify-center'>
                     <div className='w-12 h-12 border-solid border-black border rounded-full flex justify-center items-center'>
                     <Image className='w-6 h-5' src={twitterLogo} alt="Twitter logo" />
                     </div>

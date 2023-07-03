@@ -1,5 +1,4 @@
-import GetStarted from "../../../components/button/getstarted";
-import ConnectNow from "../../../components/button/connectNow";
+import FormularioWaitList from "../../../components/formularioWaitList/formulariowaitlist";
 
 export const metadata = {
     title: 'Workables - WaitList',
@@ -7,16 +6,14 @@ export const metadata = {
 }
 
 const WaitList = () => {
+
     return (
-      <div className="h-screen flex flex-col items-center justify-center gap-5">
-          <h1 className="text-6xl nordique-semibold text-center">An exciting new platform is on its way</h1>
-          <p className="max-w-[660px] text-center text-xl">We are excited to announce that Workables will launch soon, and we invite you to join our waitlist to learn more about our revolutionary platform.</p>
-          <form className="flex">
-              <input className="rounded-2xl w-60 h-8 pl-5 mr-3 shadow focus:outline-none" type="email" placeholder="example@gmail.com"/>
-              <button className="capitalize w-24 h-8 rounded-3xl shadow-md text-white border-2 gradiente flex justify-center items-center border-none cursor-pointer">Join us</button>
-          </form>
-      </div>
+        <div className="h-screen flex flex-col items-center justify-center gap-5">
+            <h1 className="px-4 text-4xl sm:text-6xl nordique-semibold text-center">An exciting new platform is on its way</h1>
+            <p className="px-4 max-w-[660px] text-center text-xl">We are excited to announce that Workables will launch soon, and we invite you to join our waitlist to learn more about our revolutionary platform.</p>
+            <FormularioWaitList />
+        </div>
     )
-  }
-  
-  export default WaitList;
+}
+
+export default WaitList;

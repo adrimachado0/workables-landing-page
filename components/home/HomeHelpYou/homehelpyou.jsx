@@ -30,7 +30,7 @@ const HomeHelpYou = () => {
                             <p className='text-3xl nordique-regular lowercase'>Get paid worldwide</p>
                             <p>Join our global talent network</p>
                         </div>
-                        <div className='flex gap-3 xl:gap-14 flex-wrap justify-center'>
+                        <div className='flex gap-3 xl:gap-14 flex-wrap justify-center w-52 sm:w-fit'>
                             <div className='flex flex-col items-center justify-between w-24'>
                                 <Image width={43} src={Vocalists} alt="Logo icon"/>
                                 <p>vocalists</p>

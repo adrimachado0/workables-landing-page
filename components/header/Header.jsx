@@ -11,26 +11,20 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { fixedUnfixed } from '@/redux/features/fixedBody/fixedBody';
+const Header = ({setFixed}) => {
 
-const Header = ({fixed, setFixed}) => {
-
-  const [openMenu, setOpenMenu] = useState(false)
+  const [openMenu, setOpenMenu] = useState(true)
 
   const pathname = usePathname()
 
   useEffect(() => {
-    setOpenMenu(!openMenu)
+    setOpenMenu(false)
   }, [pathname])
 
-  // const fixed = useSelector(state => state.fixed)
-  // const dispatch = useDispatch()
-
-  const handleFixedBody = fixedBody => {
-    // dispatch(fixedUnfixed(fixedBody))
-    setFixed(fixedBody)
-  }
+  useEffect(() => {
+    if(openMenu) return setFixed(true)
+    return setFixed(false)
+  }, [openMenu])
 
   return (
     <header className='absolute w-full flex gap-2 md:gap-5 justify-between items-center my-5 top-0'>
@@ -40,17 +34,15 @@ const Header = ({fixed, setFixed}) => {
             <Link href="/waitlist" className='cursor-pointer z-50'>Sign in</Link>
             <GetStarted info="Get started" className='z-50 cursor-pointer' />
         </div>
-        <Image width={30} height={30} onClick={() => {setOpenMenu(!openMenu); handleFixedBody(true)}} className=' z-10 md:hidden cursor-pointer' src={Hamburger} alt="Hamburger menu"/>
+        <Image width={30} height={30} onClick={() => setOpenMenu(true)} className='z-10 md:hidden cursor-pointer pt-2' src={Hamburger} alt="Hamburger menu"/>
       </div>
         <div className={`z-50 absolute right-0 -top-5 ${openMenu ? 'w-full' : 'w-0'} transition-all duration-300 bg-white overflow-hidden`}>
-              <div className={`md:hidden h-screen z-50 flex flex-col items-center justify-center`}>
-                  <ul className={`flex flex-col gap-5 items-center`}>
-                    <li>
-                      <Link className='z-10' href='/'><Image className='w-52' src={Logo} alt="Logo Workables" /></Link>
-                    </li>
+              <div className={`md:hidden h-screen z-50 flex flex-col items-center`}>
+                  <Link className='z-10' href='/'><Image className='w-52 mt-2' src={Logo} alt="Logo Workables" /></Link>
+                  <ul className={`flex flex-col gap-5 items-center my-auto`}>
                     <li className={`${openMenu ? 'w-fit' : 'w-0'}`}><Link href="/waitlist" className='cursor-pointer'>Sign in</Link></li>
                     <li className={`${openMenu ? 'w-fit' : 'w-0'}`}><GetStarted info="Get started"/></li>
-                    <li className={`${openMenu ? 'w-fit' : 'w-0'}`}><Image onClick={() => {setOpenMenu(!openMenu); handleFixedBody(false)}}className='cursor-pointer' width={10} src={CloseAside} alt="Close button" /></li>
+                    <li className={`${openMenu ? 'w-fit' : 'w-0'}`}><Image onClick={() => setOpenMenu(false)}className='cursor-pointer' width={10} src={CloseAside} alt="Close button" /></li>
                   </ul>
               </div>
         </div>
