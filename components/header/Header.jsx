@@ -13,7 +13,7 @@ import { usePathname } from 'next/navigation';
 
 const Header = ({setFixed}) => {
 
-  const [openMenu, setOpenMenu] = useState(true)
+  const [openMenu, setOpenMenu] = useState(false)
 
   const pathname = usePathname()
 
