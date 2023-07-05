@@ -44,14 +44,12 @@ const FormularioWaitList = () => {
             if(response.data.mensaje === 'access') {
                 try {
                     const req = await sendMail(values.email);
-                    console.log('todo en orden')
                     setBodyMensaje({
                         img:VerifiedImage,
                         title:'We just send an email to your inbox',
                         text:'In a few of weekends you are going to receive the email that anunce that Workables its out.'
                     })
                 } catch (e) {
-                    console.log('error');
                     setBodyMensaje({
                         img:ErrorImage,
                         title:'Ups! There was an error.',
@@ -59,7 +57,6 @@ const FormularioWaitList = () => {
                     })
                 }
             } else {
-                console.log('Este mail ya esta registrado')
                 setBodyMensaje({
                     img:ErrorImage,
                     title:'This email is already in use!',
@@ -67,7 +64,6 @@ const FormularioWaitList = () => {
                 })
             }
         } catch (error) {
-            console.log('ERRROR')
             setBodyMensaje({
                 img:ErrorImage,
                 title:'Ups! There was an error.',
@@ -148,19 +144,22 @@ const FormularioWaitList = () => {
             {
                 body &&
                 <div className='w-full h-full backdrop-blur-sm bg-white/30 fixed top-0 left-0 z-50'>
-                    <div className='gradiente w-[700px] h-[400px] p-0.5 rounded-xl fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'>
+                    <div className='gradiente w-11/12 md:w-[700px] h-[400px] p-0.5 rounded-xl fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'>
                         <div className='w-full h-full bg-white rounded-xl flex flex-col items-center justify-center gap-3 md:gap-7'>
                             {
-                                isLoading && 
-                                        <div className='bg-white fixed top-1 left-1/2 -translate-x-1/2'>
+                                isLoading ?
+                                        <div className='bg-white fixed top-1/2 -translate-y-1/2 md:top-0.5 md:-translate-y-0 left-1/2 -translate-x-1/2'>
                                             <Lottie animationData={Loader}/>
                                             <p className='text-center text-xl'>Loading...</p>
                                         </div>
+                                        :<div className='flex  flex-col items-center gap-3'>
+                                            <p onClick={() => {setBody(false); dispatch(fixedUnfixed())}} className='absolute top-7 right-7 cursor-pointer'>X</p>
+                                            <Image width={152} height={152} src={bodyMensaje.img} alt='Notification email send' />
+                                            <p className='text-2xl md:text-3xl nordique-semibold text-center'>{bodyMensaje.title}</p>
+                                            <p className='text-center'>{bodyMensaje.text}</p>
+                                        </div>
+
                             }
-                            <p onClick={() => {setBody(false); dispatch(fixedUnfixed())}} className='absolute top-7 right-7 cursor-pointer'>X</p>
-                            <Image width={152} height={152} src={bodyMensaje.img} alt='Notification email send' />
-                            <p className='text-2xl md:text-3xl nordique-semibold text-center'>{bodyMensaje.title}</p>
-                            <p className='text-center'>{bodyMensaje.text}</p>
                         </div>
                     </div>
                 </div>
