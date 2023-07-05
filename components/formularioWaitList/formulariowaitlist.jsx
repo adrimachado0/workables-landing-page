@@ -68,6 +68,11 @@ const FormularioWaitList = () => {
             }
         } catch (error) {
             console.log('ERRROR')
+            setBodyMensaje({
+                img:ErrorImage,
+                title:'Ups! There was an error.',
+                text:'Please try again.'
+            })
         }
     }
 
