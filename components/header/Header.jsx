@@ -5,6 +5,8 @@ import Logo from '../../assets/workablesLogo.webp'
 import LogoImagen from '../../assets/workablesLogo.png'
 import GetStarted from '../button/getstarted'
 
+import { useSelector } from 'react-redux';
+
 import Hamburger from './img/hamburger.png';
 import CloseAside from './img/CloseAside.png';
 
@@ -18,6 +20,8 @@ const Header = ({setFixed}) => {
 
   const pathname = usePathname()
 
+  const bodyFixed = useSelector(state => state.fixed).value
+
   useEffect(() => {
     setOpenMenu(false)
   }, [pathname])
@@ -26,6 +30,14 @@ const Header = ({setFixed}) => {
     if(openMenu) return setFixed(true)
     return setFixed(false)
   }, [openMenu])
+
+  useEffect(() => {
+    
+    if(bodyFixed) return setFixed(true)
+    else return setFixed(false)
+
+  }, [bodyFixed])
+  
 
   return (
     <header className='absolute w-full flex gap-2 md:gap-5 justify-between items-center my-5 top-0'>

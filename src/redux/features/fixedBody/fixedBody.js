@@ -6,8 +6,8 @@ export const fixedBody = createSlice({
         value: false
     },
     reducers: {
-        fixedUnfixed: (state, action) => {
-            state.value = action.payload
+        fixedUnfixed: (state) => {
+            state.value = !state.value
         },
     }
 })

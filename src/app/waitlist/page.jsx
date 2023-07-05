@@ -6,11 +6,10 @@ export const metadata = {
 }
 
 const WaitList = () => {
-
     return (
         <div className="h-screen flex flex-col items-center justify-center gap-5">
             <h1 className="px-4 text-4xl sm:text-6xl nordique-semibold text-center">An exciting new platform is on its way</h1>
-            <p className="px-4 max-w-[660px] text-center text-xl">We are excited to announce that Workables will launch soon, and we invite you to join our waitlist to learn more about our revolutionary platform.</p>
+            <p className="px-4 max-w-[700px] text-center text-xl">We are excited to announce that Workables will launch soon, and we invite you to join our waitlist to learn more about our revolutionary platform.</p>
             <FormularioWaitList />
         </div>
     )

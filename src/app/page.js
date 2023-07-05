@@ -14,7 +14,6 @@ export const metadata = {
 }
 
 export default function Home() {
-
   return (
       <div className="xl:mx-auto max-w-7xl mx-5">
           <HomeTitle />      

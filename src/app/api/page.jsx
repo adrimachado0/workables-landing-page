@@ -5,9 +5,8 @@ export default async function handler(request, response) {
   const message = {
     from: process.env.NODEMAILER_EMAIL,
     to: request.searchParams.email,
-    subject: 'Prueba',
-    text: 'Prueba',
-    html: '<img src="@/assets/workablesLogo.png"/>'
+    subject: 'Probando',
+    text: '',
   };
 
   let transporter = nodemailer.createTransport({
