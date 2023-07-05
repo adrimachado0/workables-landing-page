@@ -9,25 +9,35 @@ import ErrorImage from './img/error.png'
 import VerifiedImage from './img/verified.png'
 import { fixedUnfixed } from '@/redux/features/fixedBody/fixedBody';
 
+// Animaciones
+import Loader from './animations/Loader.json'
+
+// LottieFile
+import Lottie from 'lottie-react'
+
 import Image from 'next/image';
 
 const FormularioWaitList = () => {
 
     const {values, handleChange} = useContactForm();
-    const [body, setBody] = useState(false)
+    const [body, setBody] = useState(false);
     const [bodyMensaje, setBodyMensaje] = useState({
-        img:ErrorImage,
-        title:'Ups! There was an error.',
-        text:'Please try again.'
-    })
-    const fixedBody = useSelector(state => state.fixed).value
-    const dispatch = useDispatch()
+        // img:ErrorImage,
+        // title:'Ups! There was an error.',
+        // text:'Please try again.'
+    });
+    const [isLoading, setIsLoading] = useState(false);
+
+    const fixedBody = useSelector(state => state.fixed).value;
+    const dispatch = useDispatch();
 
     const handleSubmit = async(e) => {
         e.preventDefault()
+        setIsLoading(true)
+        dispatch(fixedUnfixed())
+        setBody(true)
         setTimeout(() => {
-            setBody(true)
-            dispatch(fixedUnfixed())
+            setIsLoading(false)
         }, 2500)
         try {
             const response = await almacenarCorreo(values.email)
@@ -133,8 +143,15 @@ const FormularioWaitList = () => {
             {
                 body &&
                 <div className='w-full h-full backdrop-blur-sm bg-white/30 fixed top-0 left-0 z-50'>
-                    <div className='gradiente w-3/5 h-3/5 p-0.5 rounded-xl fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'>
+                    <div className='gradiente w-[700px] h-[400px] p-0.5 rounded-xl fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'>
                         <div className='w-full h-full bg-white rounded-xl flex flex-col items-center justify-center gap-3 md:gap-7'>
+                            {
+                                isLoading && 
+                                        <div className='bg-white fixed top-1 left-1/2 -translate-x-1/2'>
+                                            <Lottie animationData={Loader}/>
+                                            <p className='text-center text-xl'>Loading...</p>
+                                        </div>
+                            }
                             <p onClick={() => {setBody(false); dispatch(fixedUnfixed())}} className='absolute top-7 right-7 cursor-pointer'>X</p>
                             <Image width={152} height={152} src={bodyMensaje.img} alt='Notification email send' />
                             <p className='text-2xl md:text-3xl nordique-semibold text-center'>{bodyMensaje.title}</p>
