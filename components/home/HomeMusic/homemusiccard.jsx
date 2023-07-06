@@ -97,23 +97,23 @@ const HomeMusicCard = () => {
             <div className='flex flex-col items-center'>
               <Image width={476} className='absolute mt-10 hidden md:block' src={BgLine} alt='Bg line'/>
               <Image width={351} className='absolute mt-10 md:hidden' src={BgLine} alt='Bg line'/>
-              <div className='gradiente w-fit rounded-full p-1 relative'>
-                <Image height={224} className='rounded-full' src={currentSong ? currentSong.icon : CardImage} alt='Image card' />
-                <div className='flex items-center justify-center gap-28 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+              <div className='gradiente w-[232px] h-[232px] rounded-full p-1 relative'>
+                <Image className='rounded-full w-[224px] h-[224px]' src={currentSong ? currentSong.icon : CardImage} alt='Image card' />
+                <div className='flex w-[300px] justify-between items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   {
                         currentSong && currentSong.id > 1
-                        ?   <Image className='cursor-pointer' onClick={handleClickPrevious} width={27} height={25} src={CardPrevious} alt='Controller icon' />
-                        :   <Image className=' opacity-0' width={27} height={25} src={CardPrevious} alt='Controller icon' />
+                        ?   <Image className='w-[27px] h-[25px] cursor-pointer' onClick={handleClickPrevious} src={CardPrevious} alt='Controller icon' />
+                        :   <Image className='w-[27px] h-[25px]  opacity-0' src={CardPrevious} alt='Controller icon' />
                   }
                   {
                       currentSong && !pause
-                      ? <Image className='cursor-pointer' onClick={handleClickPlay} src={CardPause} width={25} alt="Icon controller"/>
-                      : <Image className='cursor-pointer' onClick={handleClickPlay} src={CardPlay} width={25} alt="Icon controller"/>
+                      ? <Image className='w-[23px] h-[27px] cursor-pointer' onClick={handleClickPlay} src={CardPause} alt="Icon controller"/>
+                      : <Image className='w-[23px] h-[27px] cursor-pointer' onClick={handleClickPlay} src={CardPlay} alt="Icon controller"/>
                   }
                   {
                         currentSong && currentSong.id < canciones.length
-                        ?   <Image className='cursor-pointer' onClick={handleClickNext} width={27} height={25} src={CardNext} alt='Controller icon' />
-                        :   <Image className=' opacity-0' width={27} height={25} src={CardNext} alt='Controller icon' />
+                        ?   <Image className='w-[27px] h-[25px] cursor-pointer' onClick={handleClickNext} src={CardNext} alt='Controller icon' />
+                        :   <Image className='w-[27px] h-[25px] opacity-0' src={CardNext} alt='Controller icon' />
                   }
                 </div>
               </div>

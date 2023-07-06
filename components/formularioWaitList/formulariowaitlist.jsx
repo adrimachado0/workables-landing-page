@@ -34,7 +34,7 @@ const FormularioWaitList = () => {
     const handleSubmit = async(e) => {
         e.preventDefault()
         setIsLoading(true)
-        dispatch(fixedUnfixed())
+        // dispatch(fixedUnfixed())
         setBody(true)
         setTimeout(() => {
             setIsLoading(false)
@@ -153,7 +153,7 @@ const FormularioWaitList = () => {
                                             <p className='text-center text-xl'>Loading...</p>
                                         </div>
                                         :<div className='flex  flex-col items-center gap-3'>
-                                            <p onClick={() => {setBody(false); dispatch(fixedUnfixed())}} className='absolute top-7 right-7 cursor-pointer'>X</p>
+                                            <p onClick={() => {setBody(false)}} className='absolute top-7 right-7 cursor-pointer'>X</p>
                                             <Image width={152} height={152} src={bodyMensaje.img} alt='Notification email send' />
                                             <p className='text-2xl md:text-3xl nordique-semibold text-center'>{bodyMensaje.title}</p>
                                             <p className='text-center'>{bodyMensaje.text}</p>
